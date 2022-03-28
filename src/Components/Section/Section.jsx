@@ -15,7 +15,7 @@ export const Section = () => {
   useEffect(()=>{
     axios.get(`http://localhost:8080/books`).then((res)=>{
       const data=res.data.filter((el)=>{
-        return el.section==sec
+        return el.section === sec
       })
       console.log(data)
       setSecook([...data])
