@@ -1,6 +1,11 @@
-export const SortAndFilterButtons = ({ handleSort }) => {
+import { useState,useEffect } from "react";
+
+
+export const SortAndFilterButtons = ({ handleSort,books }) => {
+   
+
   return (
-    <div className="sortButtons">
+    <div className="sortButtons" style={{display:"flex", justifyContent: "space-evenly"}}>
       {/*
         Create 4 sorting buttons here to sort by following criteria:
 
@@ -14,6 +19,10 @@ export const SortAndFilterButtons = ({ handleSort }) => {
         and sort the data.
 
       */}
+      <button className="sortByTitleAsc" onClick= "">sortByTitleAsc</button>
+      <button className="sortByTitleDesc" onClick= "">sortByTitleDesc</button>
+      <button className="sortByPriceAsc" onClick= "">sortByPriceAsc</button>
+      <button className="sortByPriceDesc"  onClick= "">sortByPriceDesc</button>
     </div>
   );
 };

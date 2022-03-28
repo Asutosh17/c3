@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <>
-      <div className="navbar">
+      <div className="navbar" style={{display:"flex",justifyContent:"space-around"}}>
         {/* Populate 5 buttons with EXACT same classnames as of their routes name */}
         {/* Example: 
             <button className="history"> Link to history here  </button>  */}
         {/* Home component will have `/` route and classname as `home`  */}
-        <Link to={'/'}><button className="Home">Home</button></Link>
-        <Link to={'/section/Mystery'}><button className="Mystery">Mystery</button></Link>
-        <Link to={'/section/Technology'}><button className="Technology" >Technology</button></Link>
-        <Link to={'/section/Mythology'}><button className="Mythology">Mythology</button></Link>
-        <Link to={'/section/history'}><button className="history">history</button></Link>
+        <Link className="home" to={"/"}>Home</Link>
+        <Link className="history" to={"/section/history"}>History</Link>
+        <Link className="mystery" to={"/section/Mystery"}>Mystery</Link>
+        <Link className="mythology" to={"/section/Mythology"}>Mythology</Link>
+        <Link className="technology" to={"/section/Technology"}>Technology</Link>
       </div>
     </>
   );
